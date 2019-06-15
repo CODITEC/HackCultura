@@ -89,10 +89,10 @@ public class CulturioActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_ranking) {
             cargarFramento(new MuseoMapFragment());
-            return true;
+
         } else if (id == R.id.nav_medallas) {
 
         } else if (id == R.id.nav_share) {
