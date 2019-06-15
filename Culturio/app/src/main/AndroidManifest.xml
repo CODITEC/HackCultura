@@ -30,7 +30,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".CulturioActivity"
+            android:name=".activity.CulturioActivity"
             android:label="@string/title_activity_culturio"
             android:theme="@style/AppTheme.NoActionBar" >
 
@@ -40,7 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
         </activity>
     </application>
 
