@@ -3,6 +3,8 @@ package com.example.culturio.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import com.example.culturio.R;
+import com.example.culturio.fragment.MuseoMapFragment;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -87,13 +90,14 @@ public class CulturioActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_ranking) {
+            cargarFramento(new MuseoMapFragment());
+            return true;
+        } else if (id == R.id.nav_medallas) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_setting) {
 
         }
 
@@ -110,5 +114,14 @@ public class CulturioActivity extends AppCompatActivity
         mMap.setIndoorEnabled(false);
         mMap.setBuildingsEnabled(false);
         mMap.getUiSettings().setZoomControlsEnabled(false);
+    }
+
+    private void cargarFramento(Fragment fragment){
+        /*Bundle bundle = new Bundle();
+        bundle.putString("id",id);
+        fragment.setArguments(bundle);*/
+
+        FragmentManager manager = getSupportFragmentManager ();
+        manager.beginTransaction().replace(R.id.map_home,fragment).addToBackStack(null).commit();
     }
 }
