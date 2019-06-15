@@ -91,8 +91,6 @@ public class CulturioActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_tools) {
-
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
