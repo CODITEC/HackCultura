@@ -30,12 +30,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <activity
-            android:name=".CulturioActivity"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_culturio"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".activity.CulturioActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
