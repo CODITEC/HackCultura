@@ -22,6 +22,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:tint="#ffffff"
+        app:fabSize="normal"
+        android:clickable="true"
+        android:backgroundTint="#790d01"
         android:src="@drawable/ic_conflict"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -4,6 +4,7 @@ package com.example.culturio.fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +49,11 @@ public class QrFragment extends Fragment implements ZXingScannerView.ResultHandl
         Bundle bundle = new Bundle();
         bundle.putString("key",result.toString());
 
-        RetosFragment retosFragment = new RetosFragment();
+        Fragment retosFragment = new RetosFragment();
         retosFragment.setArguments(bundle);
-        getFragmentManager().beginTransaction().replace(R.id.map_home, retosFragment).commit();
+        FragmentManager manager = getFragmentManager();
+        manager.beginTransaction().replace(R.id.map_home,retosFragment).addToBackStack(null).commit();
+        //getFragmentManager().beginTransaction().replace(R.id.map_home, retosFragment).commit();
 
     }
 

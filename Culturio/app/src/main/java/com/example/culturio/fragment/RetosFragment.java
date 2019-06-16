@@ -22,9 +22,12 @@ public class RetosFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_retos, container, false);
 
-        textView = view.findViewById(R.id.txtRetante);
+        textView = view.findViewById(R.id.userPeleador);
+
         String value = this.getArguments().getString("key");
-        textView.setText(value);
+        String[] nombre = value.split(" ");
+        String finalValue = "¡Has retado a"+nombre[0]+"!";
+        textView.setText(finalValue);
         return view;
     }
 

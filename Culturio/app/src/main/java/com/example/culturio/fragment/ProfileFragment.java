@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.culturio.R;
+import com.example.culturio.activity.CulturioActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,7 +28,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        floatingActionButton = view.findViewById(R.id.floatButton);
+        floatingActionButton = getActivity().findViewById(R.id.floatButton);
         floatingActionButton.hide();
         return view;
     }
