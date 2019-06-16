@@ -141,7 +141,7 @@ public class CulturioActivity extends AppCompatActivity
                             .icon(BitmapDescriptorFactory.fromResource((R.drawable.searcher))));
 
                     // Mover camara
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Common.mLastLocation.getLatitude(), Common.mLastLocation.getLongitude()), 15.0f));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Common.mLastLocation.getLatitude(), Common.mLastLocation.getLongitude()), 17.0f));
                 } else {
                     Log.d("ERROR", "No se pudo obtener tu ubicación");
                 }
