@@ -8,10 +8,8 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
-=======
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
->>>>>>> 74e3b58914111be638b5ae19da8d36ffa8a6c8b9
+
 
     <application
         android:allowBackup="true"
@@ -40,19 +38,10 @@
             android:value="@string/google_maps_key" />
         <activity
             android:label="@string/title_activity_culturio"
-<<<<<<< HEAD
-            android:theme="@style/AppTheme.NoActionBar">
-=======
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".activity.CulturioActivity">
 
->>>>>>> 74e3b58914111be638b5ae19da8d36ffa8a6c8b9
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity"></activity>
     </application>
