@@ -38,8 +38,12 @@ public class RetarFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(),"Abriendo QR",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getActivity(), ScanCodeActivity.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(getActivity(), QrFragment.class);
+                startActivity(intent);*/
+                QrFragment qrFragment = new QrFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.map_home, qrFragment)
+                .addToBackStack(null).commit();
             }
         });
         relativeLayout.setOnClickListener(new View.OnClickListener() {

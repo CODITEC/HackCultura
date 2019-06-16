@@ -213,6 +213,7 @@ public class CulturioActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
                 getSupportFragmentManager().popBackStackImmediate();
+                floatingActionButton.show();
             }
         } else if (id == R.id.nav_ranking) {
             cargarFramento(new MuseoMapFragment());
