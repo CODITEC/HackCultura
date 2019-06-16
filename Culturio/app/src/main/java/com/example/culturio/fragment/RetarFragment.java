@@ -37,7 +37,7 @@ public class RetarFragment extends Fragment {
         btnQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),"Abriendo QR",Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Abriendo QR",Toast.LENGTH_SHORT).show();
                 /*Intent intent = new Intent(getActivity(), QrFragment.class);
                 startActivity(intent);*/
                 QrFragment qrFragment = new QrFragment();
