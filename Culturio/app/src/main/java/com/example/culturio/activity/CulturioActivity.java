@@ -27,12 +27,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.Window;
+import android.widget.Button;
 
 import com.example.culturio.Common;
 import com.example.culturio.R;
 import com.example.culturio.fragment.MedalsFragment;
 import com.example.culturio.fragment.MuseoMapFragment;
 import com.example.culturio.fragment.ProfileFragment;
+import com.example.culturio.fragment.QrFragment;
 import com.example.culturio.fragment.RetarFragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -61,6 +63,7 @@ public class CulturioActivity extends AppCompatActivity
     FloatingActionButton floatingActionButton;
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationCallback locationCallback;
+    Button btnQR;
 
     //PLAY SERVICE
     private static final int MY_PERMISSION_REQUEST_CODE = 7192;
@@ -96,12 +99,21 @@ public class CulturioActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 //cargarFramento(new RetarFragment());
-                final Dialog dialog = new Dialog(getApplication());
+                final Dialog dialog = new Dialog(CulturioActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
                 dialog.setContentView(R.layout.fragment_retar);
+                btnQR = dialog.findViewById(R.id.btnQR);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
                 dialog.setCancelable(true);
                 dialog.show();
+                btnQR.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                        cargarFramento(new QrFragment());
+                    }
+                });
+
             }
         });
     }

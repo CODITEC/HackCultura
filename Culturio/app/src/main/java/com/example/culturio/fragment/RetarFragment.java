@@ -32,20 +32,20 @@ public class RetarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_retar, container, false);
-        btnQR = view.findViewById(R.id.btnQR);
-        //relativeLayout = view.findViewById(R.id.lyt_parent);
+        /*btnQR = view.findViewById(R.id.btnQR);
+
         btnQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(),"Abriendo QR",Toast.LENGTH_SHORT).show();
                 /*Intent intent = new Intent(getActivity(), QrFragment.class);
-                startActivity(intent);*/
+                startActivity(intent);
                 QrFragment qrFragment = new QrFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.map_home, qrFragment)
                 .addToBackStack(null).commit();
             }
-        });
+        });*/
         /*relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

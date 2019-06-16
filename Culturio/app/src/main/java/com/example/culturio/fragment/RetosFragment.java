@@ -26,7 +26,7 @@ public class RetosFragment extends Fragment {
 
         String value = this.getArguments().getString("key");
         String[] nombre = value.split(" ");
-        String finalValue = "¡Has retado a"+nombre[0]+"!";
+        String finalValue = "¡Has retado a "+nombre[0]+"!";
         textView.setText(finalValue);
         return view;
     }
