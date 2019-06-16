@@ -27,6 +27,7 @@ import android.view.Menu;
 
 import com.example.culturio.Common;
 import com.example.culturio.R;
+import com.example.culturio.fragment.MedalsFragment;
 import com.example.culturio.fragment.MuseoMapFragment;
 import com.example.culturio.fragment.ProfileFragment;
 import com.example.culturio.fragment.RetarFragment;
@@ -214,7 +215,7 @@ public class CulturioActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             cerrarFragments();
         } else if (id == R.id.nav_ranking) {
-            cargarFramento(new MuseoMapFragment());
+            //cargarFramento(new MuseoMapFragment());
 
         } else if (id == R.id.nav_retar) {
             cargarFramento(new RetarFragment());
@@ -224,6 +225,8 @@ public class CulturioActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
             cargarFramento(new ProfileFragment());
+        } else if (id == R.id.nav_medallas) {
+            cargarFramento(new MedalsFragment());
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

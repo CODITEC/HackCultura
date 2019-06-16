@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--shopping category data-->
+    <integer-array name="shop_category_icon">
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+        <item>@drawable/ic_conflict</item>
+    </integer-array>
+
+    <integer-array name="shop_category_bg">
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+    </integer-array>
+
+    <string-array name="shop_category_title">
+        <item>Gadgets and Computers</item>
+        <item>Fashion</item>
+        <item>Beauty and Health</item>
+        <item>Babies and Kids</item>
+        <item>Home and Garden</item>
+
+        <item>Sports and Hobby</item>
+        <item>Ticket and Voucher</item>
+        <item>Service and Food</item>
+    </string-array>
+
+    <string-array name="shop_category_brief">
+        <item>100k Items</item>
+        <item>655k Items</item>
+        <item>221k Items</item>
+        <item>85k Items</item>
+        <item>725k Items</item>
+
+        <item>932k Items</item>
+        <item>475k Items</item>
+        <item>362k Items</item>
+    </string-array>
+
+
+</resources>
