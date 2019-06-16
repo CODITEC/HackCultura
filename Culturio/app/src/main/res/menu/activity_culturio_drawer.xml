@@ -16,6 +16,10 @@
             android:id="@+id/nav_medallas"
             android:icon="@drawable/ic_beenhere_black_24dp"
             android:title="Medallas" />
+        <item
+            android:id="@+id/nav_retar"
+            android:icon="@drawable/ic_conflict"
+            android:title="Retar " />
     </group>
 
     <item android:title="Usuario">

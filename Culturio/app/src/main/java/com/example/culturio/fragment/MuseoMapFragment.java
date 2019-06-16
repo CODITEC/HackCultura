@@ -1,6 +1,8 @@
 package com.example.culturio.fragment;
 
 
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.culturio.R;
+
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
