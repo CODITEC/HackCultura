@@ -268,9 +268,11 @@ public class CulturioActivity extends AppCompatActivity
     }
 
     public void cerrarFragments(){
+        Common.returnHome = 1;
         while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStackImmediate();
             floatingActionButton.show();
         }
+        Common.returnHome = 0;
     }
 }

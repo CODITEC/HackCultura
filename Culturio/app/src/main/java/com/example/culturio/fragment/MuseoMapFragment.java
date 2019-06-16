@@ -56,6 +56,9 @@ public class MuseoMapFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_museo_map, container, false);
+        if(Common.returnHome == 1){
+            return view;
+        }
         Retrofit retrofit = RetrofitClient.getInstance();
         myAPI = retrofit.create(INodeJS.class);
         floatingActionButton = getActivity().findViewById(R.id.floatButton);

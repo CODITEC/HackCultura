@@ -11,6 +11,8 @@ public class Common {
     public static Integer preg1 = 0;
     public static Integer preg2 = 0;
     public static Integer preg3 = 0;
+    public static Integer returnHome = 0;
+
 
 
     public static final HashMap<Integer, String> listaPreguntas = new HashMap<Integer, String>();
@@ -26,4 +28,5 @@ public class Common {
         datosPersona.put(2,"franco.condor");
         datosPersona.put(3,"photo_male_1");
     }
+
 }
