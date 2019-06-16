@@ -4,6 +4,7 @@ package com.example.culturio.fragment;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import java.util.Locale;
 public class MuseoMapFragment extends Fragment {
 
     Button btnStart;
+    FloatingActionButton floatingActionButton;
 
     public MuseoMapFragment() {
         // Required empty public constructor
@@ -33,6 +35,8 @@ public class MuseoMapFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_museo_map, container, false);
+        floatingActionButton = getActivity().findViewById(R.id.floatButton);
+        floatingActionButton.hide();
         btnStart = view.findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override

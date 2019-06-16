@@ -2,7 +2,6 @@ package com.example.culturio.fragment;
 
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +12,10 @@ import com.example.culturio.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfileFragment extends Fragment {
+public class RetarFragment extends Fragment {
 
-    FloatingActionButton floatingActionButton;
 
-    public ProfileFragment() {
+    public RetarFragment() {
         // Required empty public constructor
     }
 
@@ -26,9 +24,8 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        floatingActionButton = getActivity().findViewById(R.id.floatButton);
-        floatingActionButton.hide();
+        View view = inflater.inflate(R.layout.fragment_retar, container, false);
+
         return view;
     }
 

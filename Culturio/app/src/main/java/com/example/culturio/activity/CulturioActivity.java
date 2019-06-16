@@ -29,6 +29,7 @@ import com.example.culturio.Common;
 import com.example.culturio.R;
 import com.example.culturio.fragment.MuseoMapFragment;
 import com.example.culturio.fragment.ProfileFragment;
+import com.example.culturio.fragment.RetarFragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -44,6 +45,8 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.Console;
+
 public class CulturioActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
 
@@ -51,7 +54,7 @@ public class CulturioActivity extends AppCompatActivity
     SupportMapFragment mapFragment;
 
     Marker culturePlayer, ministerioCultura;
-
+    FloatingActionButton floatingActionButton;
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationCallback locationCallback;
 
@@ -83,6 +86,14 @@ public class CulturioActivity extends AppCompatActivity
         mapFragment.getMapAsync(this);
         navigationView.setNavigationItemSelectedListener(this);
         setUpLocation();
+        floatingActionButton = findViewById(R.id.floatButton);
+        floatingActionButton.show();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cargarFramento(new RetarFragment());
+            }
+        });
     }
 
     @Override
@@ -206,8 +217,8 @@ public class CulturioActivity extends AppCompatActivity
         } else if (id == R.id.nav_ranking) {
             cargarFramento(new MuseoMapFragment());
 
-        } else if (id == R.id.nav_medallas) {
-
+        } else if (id == R.id.nav_retar) {
+            cargarFramento(new RetarFragment());
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_setting) {
