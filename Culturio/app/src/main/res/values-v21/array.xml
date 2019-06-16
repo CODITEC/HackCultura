@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--shopping category data-->
+    <integer-array name="shop_category_icon">
+        <item>@drawable/ic_rating</item>
+        <item>@drawable/ic_rating2</item>
+        <item>@drawable/ic_rating3</item>
+        <item>@drawable/ic_rating4</item>
+        <item>@drawable/ic_rating5</item>
+
+
+        <item>@drawable/ic_gold_medal</item>
+        <item>@drawable/ic_silver_medal</item>
+        <item>@drawable/ic_bronze_medal</item>
+    </integer-array>
+
+    <integer-array name="shop_category_bg">
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+        <item>@drawable/img</item>
+    </integer-array>
+
+    <string-array name="shop_category_title">
+        <item>Cultura I</item>
+        <item>Cultura II</item>
+        <item>Cultura III</item>
+        <item>Cultura IV</item>
+        <item>Cultura V</item>
+
+
+
+        <!--        <item>Sol de Echenique</item>
+                <item>Moche</item>
+                <item>Chancay</item>
+                <item>Nazca</item>-->
+
+        <item>1ro en Perú</item>
+        <item>2do en Perú</item>
+        <item>3ro en Perú</item>
+
+    </string-array>
+
+    <string-array name="shop_category_brief">
+        <item>100k Items</item>
+        <item>655k Items</item>
+        <item>221k Items</item>
+        <item>85k Items</item>
+        <item>725k Items</item>
+
+        <item>932k Items</item>
+        <item>475k Items</item>
+        <item>362k Items</item>
+    </string-array>
+
+
+</resources>

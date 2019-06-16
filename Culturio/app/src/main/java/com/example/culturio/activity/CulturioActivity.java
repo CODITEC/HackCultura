@@ -1,8 +1,10 @@
 package com.example.culturio.activity;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
@@ -24,9 +26,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.Window;
 
 import com.example.culturio.Common;
 import com.example.culturio.R;
+import com.example.culturio.fragment.MedalsFragment;
 import com.example.culturio.fragment.MuseoMapFragment;
 import com.example.culturio.fragment.ProfileFragment;
 import com.example.culturio.fragment.RetarFragment;
@@ -91,7 +95,13 @@ public class CulturioActivity extends AppCompatActivity
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cargarFramento(new RetarFragment());
+                //cargarFramento(new RetarFragment());
+                final Dialog dialog = new Dialog(getApplication());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
+                dialog.setContentView(R.layout.fragment_retar);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+                dialog.setCancelable(true);
+                dialog.show();
             }
         });
     }
@@ -214,7 +224,7 @@ public class CulturioActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             cerrarFragments();
         } else if (id == R.id.nav_ranking) {
-            cargarFramento(new MuseoMapFragment());
+            //cargarFramento(new MuseoMapFragment());
 
         } else if (id == R.id.nav_retar) {
             cargarFramento(new RetarFragment());
@@ -224,6 +234,8 @@ public class CulturioActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
             cargarFramento(new ProfileFragment());
+        } else if (id == R.id.nav_medallas) {
+            cargarFramento(new MedalsFragment());
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

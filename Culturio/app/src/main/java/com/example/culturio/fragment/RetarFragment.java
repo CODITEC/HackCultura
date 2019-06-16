@@ -20,7 +20,7 @@ import com.example.culturio.activity.ScanCodeActivity;
 public class RetarFragment extends Fragment {
 
     Button btnQR;
-    RelativeLayout relativeLayout;
+    //RelativeLayout relativeLayout;
 
     public RetarFragment() {
         // Required empty public constructor
@@ -33,7 +33,7 @@ public class RetarFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_retar, container, false);
         btnQR = view.findViewById(R.id.btnQR);
-        relativeLayout = view.findViewById(R.id.lyt_parent);
+        //relativeLayout = view.findViewById(R.id.lyt_parent);
         btnQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,12 +46,12 @@ public class RetarFragment extends Fragment {
                 .addToBackStack(null).commit();
             }
         });
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
+        /*relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().onBackPressed();
             }
-        });
+        });*/
         return view;
     }
 
