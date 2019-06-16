@@ -3,12 +3,14 @@ package com.example.culturio.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.culturio.Common;
 import com.example.culturio.R;
 
 public class QuizFragment extends Fragment {
@@ -22,11 +24,14 @@ public class QuizFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Common.positionQuiz++;
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_quiz, container, false);
         respuestaA = view.findViewById(R.id.respuestaA);
         respuestaB = view.findViewById(R.id.respuestaB);
         respuestaC = view.findViewById(R.id.respuestaC);
+
+        Log.d("QUIZ", ""+Common.listaPreguntas.get(Common.positionQuiz));
 
         respuestaA.setOnClickListener(new View.OnClickListener() {
             @Override

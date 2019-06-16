@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.culturio.Common;
 import com.example.culturio.R;
 
 import java.util.Locale;
@@ -39,7 +40,7 @@ public class MuseoMapFragment extends Fragment {
                 cargarFramento(new QuizFragment());
             }
         });
-
+        Common.positionQuiz = 0;
 
         return view;
     }
