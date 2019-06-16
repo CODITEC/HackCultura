@@ -378,6 +378,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                             >
 
                             <LinearLayout
+                                android:id="@+id/imgRV"
                                 android:layout_width="match_parent"
                                 android:layout_height="103dp"
                                 android:layout_gravity="center_horizontal|center_vertical"
@@ -386,7 +387,6 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                 android:orientation="vertical">
 
                                 <ImageView
-                                    android:id="@+id/imgRV"
                                     android:layout_width="wrap_content"
                                     android:layout_height="60dp"
                                     android:layout_gravity="center_horizontal"

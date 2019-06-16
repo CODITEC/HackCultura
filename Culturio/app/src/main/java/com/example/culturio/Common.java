@@ -31,6 +31,7 @@ public class Common {
         datosPersona.put(5,"Barranco, LI");
         datosPersona.put(6,"350");
         datosPersona.put(7,"180");
+        datosPersona.put(8,"qr");
     }
 
 }

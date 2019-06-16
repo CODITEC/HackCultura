@@ -44,7 +44,7 @@ public class MuseoMapFragment extends Fragment {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     TextView txtFacebook, txtPuntaje, txtNombre;
     CircularImageView imgLider;
-    LinearLayout guiaGo;
+    LinearLayout guiaGo,imgRV;
 
     public MuseoMapFragment() {
         // Required empty public constructor
@@ -79,6 +79,14 @@ public class MuseoMapFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 cargarFramento(new GuiaFragment());
+            }
+        });
+        imgRV = view.findViewById(R.id.imgRV);
+
+        imgRV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cargarFramento(new EmbebedFragment());
             }
         });
         Common.positionQuiz = 0;
