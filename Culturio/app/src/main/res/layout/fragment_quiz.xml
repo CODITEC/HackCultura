@@ -49,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/txtRespuestaA"
                     android:text="TUMI"
                     android:textSize="18sp"
                     android:textColor="#4a4a4a"
@@ -80,6 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/txtRespuestaB"
                     android:text="PUERTA DEL SOL"
                     android:textSize="18sp"
                     android:textColor="#4a4a4a"
@@ -111,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/txtRespuestaC"
                     android:text="SOL DE ECHENIQUE"
                     android:textSize="18sp"
                     android:textColor="#4a4a4a"
