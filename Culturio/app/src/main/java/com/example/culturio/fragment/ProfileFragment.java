@@ -2,6 +2,7 @@ package com.example.culturio.fragment;
 
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.example.culturio.R;
  */
 public class ProfileFragment extends Fragment {
 
+    FloatingActionButton floatingActionButton;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -25,7 +27,8 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
+        floatingActionButton = getActivity().findViewById(R.id.floatButton);
+        floatingActionButton.hide();
         return view;
     }
 

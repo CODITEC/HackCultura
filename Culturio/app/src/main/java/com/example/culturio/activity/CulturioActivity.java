@@ -43,6 +43,8 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.Console;
+
 public class CulturioActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
 
@@ -50,7 +52,7 @@ public class CulturioActivity extends AppCompatActivity
     SupportMapFragment mapFragment;
 
     Marker culturePlayer, ministerioCultura;
-
+    FloatingActionButton floatingActionButton;
     FusedLocationProviderClient fusedLocationProviderClient;
     LocationCallback locationCallback;
 
@@ -82,6 +84,14 @@ public class CulturioActivity extends AppCompatActivity
         mapFragment.getMapAsync(this);
         navigationView.setNavigationItemSelectedListener(this);
         setUpLocation();
+        floatingActionButton = findViewById(R.id.floatButton);
+        floatingActionButton.show();
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cargarFramento(new RetarFragment());
+            }
+        });
     }
 
     @Override
