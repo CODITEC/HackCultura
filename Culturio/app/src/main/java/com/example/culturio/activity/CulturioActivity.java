@@ -26,6 +26,7 @@ import android.view.Menu;
 import com.example.culturio.Common;
 import com.example.culturio.R;
 import com.example.culturio.fragment.MuseoMapFragment;
+import com.example.culturio.fragment.ProfileFragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -207,6 +208,8 @@ public class CulturioActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_setting) {
 
+        } else if (id == R.id.nav_profile) {
+            cargarFramento(new ProfileFragment());
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
