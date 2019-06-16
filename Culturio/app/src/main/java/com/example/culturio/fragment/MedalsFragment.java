@@ -1,6 +1,8 @@
 package com.example.culturio.fragment;
 
 
+import android.app.Dialog;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 
 import com.example.culturio.R;
 import com.example.culturio.adapter.AdapterMedals;
@@ -60,7 +64,16 @@ public class MedalsFragment extends Fragment {
         mAdapter.setOnItemClickListener(new AdapterMedals.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Medal obj, int position) {
-                Snackbar.make(parent_view, "Item" + obj.title + " clickeado", Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(parent_view, obj.title + " clickeado", Snackbar.LENGTH_SHORT).show();
+                TextView txt;
+                final Dialog dialog = new Dialog(getContext());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
+                dialog.setContentView(R.layout.popup_medals);
+                txt = dialog.findViewById(R.id.titlePop);
+                txt.setText(obj.title);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+                dialog.setCancelable(true);
+                dialog.show();
             }
         });
 
