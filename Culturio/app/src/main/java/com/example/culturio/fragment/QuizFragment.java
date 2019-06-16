@@ -34,12 +34,12 @@ public class QuizFragment extends Fragment {
         respuestaB = view.findViewById(R.id.respuestaB);
         respuestaC = view.findViewById(R.id.respuestaC);
 
-        Log.d("QUIZ", ""+Common.positionQuiz);
-        Log.d("QUIZ", ""+Common.listaPreguntas.get(Common.positionQuiz));
+        if(Common.positionQuiz > 3){
+            return view;
+        }
         String quiz = Common.listaPreguntas.get(Common.positionQuiz);
         final String[] split = quiz.split("-");
 
-        Log.d("QUIZ", ""+split);
         txtQuestion = view.findViewById(R.id.txtQuestion);
         txtRespuestaA = view.findViewById(R.id.txtRespuestaA);
         txtRespuestaB = view.findViewById(R.id.txtRespuestaB);
@@ -56,6 +56,7 @@ public class QuizFragment extends Fragment {
                 Integer answer = 0;
                 if(split[4].equals("1")){
                     answer = 1;
+                    respuestaCorrecta();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
@@ -66,6 +67,7 @@ public class QuizFragment extends Fragment {
                 Integer answer = 0;
                 if(split[4].equals("2")){
                     answer = 1;
+                    respuestaCorrecta();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
@@ -76,11 +78,22 @@ public class QuizFragment extends Fragment {
                 Integer answer = 0;
                 if(split[4].equals("3")){
                     answer = 1;
+                    respuestaCorrecta();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
         });
         return view;
+    }
+
+    private void respuestaCorrecta() {
+        if(Common.positionQuiz == 1){
+            Common.preg1 = 1;
+        } else if (Common.positionQuiz == 2){
+            Common.preg2 = 1;
+        } else if (Common.positionQuiz == 3){
+            Common.preg3 = 1;
+        }
     }
 
     private void showDialogAnswer(int i, String s1, String s2, String s3) {

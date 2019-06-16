@@ -7,6 +7,10 @@ import java.util.HashMap;
 public class Common {
     public static Location mLastLocation = null;
     public static Integer positionQuiz = 0;
+    public static Integer puntajeTotal = 0;
+    public static Integer preg1 = 0;
+    public static Integer preg2 = 0;
+    public static Integer preg3 = 0;
 
     public static final HashMap<Integer, String> listaPreguntas = new HashMap<Integer, String>();
     static {

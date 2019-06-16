@@ -45,6 +45,10 @@ public class MuseoMapFragment extends Fragment {
             }
         });
         Common.positionQuiz = 0;
+        Common.puntajeTotal = 0;
+        Common.preg1 = 0;
+        Common.preg2 = 0;
+        Common.preg3 = 0;
 
         return view;
     }

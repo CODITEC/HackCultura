@@ -122,7 +122,6 @@ public class CulturioActivity extends AppCompatActivity
             buildLocationCallBack();
             buildLocationRequest();
             fusedLocationProviderClient.requestLocationUpdates(mLocationRequest, locationCallback, Looper.myLooper());
-
         }
     }
 
@@ -211,10 +210,7 @@ public class CulturioActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-                getSupportFragmentManager().popBackStackImmediate();
-                floatingActionButton.show();
-            }
+            cerrarFragments();
         } else if (id == R.id.nav_ranking) {
             cargarFramento(new MuseoMapFragment());
 
@@ -267,5 +263,12 @@ public class CulturioActivity extends AppCompatActivity
 
         FragmentManager manager = getSupportFragmentManager ();
         manager.beginTransaction().replace(R.id.map_home,fragment).addToBackStack(null).commit();
+    }
+
+    public void cerrarFragments(){
+        while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStackImmediate();
+            floatingActionButton.show();
+        }
     }
 }
