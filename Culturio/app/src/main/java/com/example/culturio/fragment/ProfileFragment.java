@@ -20,7 +20,7 @@ import com.example.culturio.activity.CulturioActivity;
 public class ProfileFragment extends Fragment {
 
     FloatingActionButton floatingActionButton;
-    ImageView imgPerfil;
+    ImageView imgPerfil,imgqr;
     TextView txtNomPerfil,txtLugar,txtRanking,txtPuntos,txtBatallas;
 
     public ProfileFragment() {
@@ -39,8 +39,11 @@ public class ProfileFragment extends Fragment {
         floatingActionButton = getActivity().findViewById(R.id.floatButton);
         floatingActionButton.hide();
         imgPerfil = view.findViewById(R.id.imgPerfil);
+        imgqr = view.findViewById(R.id.image_qr);
         int id = getResources().getIdentifier(Common.datosPersona.get(3), "drawable",getContext().getPackageName());
         imgPerfil.setImageResource(id);
+        int id2 = getResources().getIdentifier(Common.datosPersona.get(8), "drawable",getContext().getPackageName());
+        imgqr.setImageResource(id2);
         txtNomPerfil = view.findViewById(R.id.txtNomPerfil);
         txtNomPerfil.setText(Common.datosPersona.get(1));
         txtLugar = view.findViewById(R.id.txtLugar);
