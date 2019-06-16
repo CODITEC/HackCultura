@@ -390,7 +390,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                     android:layout_width="wrap_content"
                                     android:layout_height="60dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_letter_a_svg"
+                                    android:src="@drawable/ic_image"
                                     />
 
                                 <TextView
@@ -431,7 +431,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                     android:layout_width="wrap_content"
                                     android:layout_height="60dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_letter_b_svg"
+                                    android:src="@drawable/ic_youtube"
                                     />
 
                                 <TextView
@@ -472,7 +472,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                     android:layout_width="wrap_content"
                                     android:layout_height="60dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_letter_c_svg"
+                                    android:src="@drawable/ic_musical_note"
                                     />
 
                                 <TextView
@@ -514,7 +514,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                     android:layout_width="wrap_content"
                                     android:layout_height="60dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/ic_letter_a_svg"
+                                    android:src="@drawable/ic_compass"
                                     />
 
                                 <TextView

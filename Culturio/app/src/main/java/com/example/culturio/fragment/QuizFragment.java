@@ -1,6 +1,7 @@
 package com.example.culturio.fragment;
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,6 +20,7 @@ public class QuizFragment extends Fragment {
 
     ImageView respuestaA, respuestaB, respuestaC;
     TextView txtQuestion, txtRespuestaA, txtRespuestaB, txtRespuestaC;
+    MediaPlayer mediaPlayer;
 
     public QuizFragment() {
         // Required empty public constructor
@@ -59,6 +61,10 @@ public class QuizFragment extends Fragment {
                 if(split[4].equals("1")){
                     answer = 1;
                     respuestaCorrecta();
+                } else {
+                    mediaPlayer = MediaPlayer.create(getContext(),R.raw.incorrect);
+                    mediaPlayer.setLooping(false);
+                    mediaPlayer.start();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
@@ -70,6 +76,10 @@ public class QuizFragment extends Fragment {
                 if(split[4].equals("2")){
                     answer = 1;
                     respuestaCorrecta();
+                } else {
+                    mediaPlayer = MediaPlayer.create(getContext(),R.raw.incorrect);
+                    mediaPlayer.setLooping(false);
+                    mediaPlayer.start();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
@@ -81,6 +91,10 @@ public class QuizFragment extends Fragment {
                 if(split[4].equals("3")){
                     answer = 1;
                     respuestaCorrecta();
+                } else {
+                    mediaPlayer = MediaPlayer.create(getContext(),R.raw.incorrect);
+                    mediaPlayer.setLooping(false);
+                    mediaPlayer.start();
                 }
                 showDialogAnswer(answer,split[5],split[6],split[7]);
             }
@@ -89,6 +103,10 @@ public class QuizFragment extends Fragment {
     }
 
     private void respuestaCorrecta() {
+
+        mediaPlayer = MediaPlayer.create(getContext(),R.raw.correct_ding);
+        mediaPlayer.setLooping(false);
+        mediaPlayer.start();
         if(Common.positionQuiz == 1){
             Common.preg1 = 1;
         } else if (Common.positionQuiz == 2){

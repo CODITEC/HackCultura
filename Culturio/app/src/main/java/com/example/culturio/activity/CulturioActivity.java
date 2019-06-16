@@ -153,7 +153,7 @@ public class CulturioActivity extends AppCompatActivity
                             .position(new LatLng(Common.mLastLocation.getLatitude(), Common.mLastLocation.getLongitude()))
                             .title(String.format("Tú"))
                             .flat(true)
-                            .icon(BitmapDescriptorFactory.fromResource((R.drawable.searcher))));
+                            .icon(BitmapDescriptorFactory.fromResource((R.drawable.man_blue))));
 
                     // Mover camara
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Common.mLastLocation.getLatitude(), Common.mLastLocation.getLongitude()), 17.0f));
@@ -254,7 +254,7 @@ public class CulturioActivity extends AppCompatActivity
                 .position(new LatLng(-12.086101,-77.001915))
                 .title(String.format("Museo"))
                 .flat(true)
-                .icon(BitmapDescriptorFactory.fromResource((R.drawable.museum_sign))));
+                .icon(BitmapDescriptorFactory.fromResource((R.drawable.museum_big))));
 
     }
 
