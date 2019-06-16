@@ -225,7 +225,9 @@ public class CulturioActivity extends AppCompatActivity
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                cargarFramento(new MuseoMapFragment());
+                if(marker.getTitle().equals("Museo")){
+                    cargarFramento(new MuseoMapFragment());
+                }
                 return false;
             }
         });
