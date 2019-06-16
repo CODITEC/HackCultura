@@ -44,6 +44,9 @@ public class ResultadoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_resultado, container, false);
+        if(Common.returnHome == 1){
+            return view;
+        }
         Retrofit retrofit = RetrofitClient.getInstance();
         myAPI = retrofit.create(INodeJS.class);
         txtMsjResultado = view.findViewById(R.id.txtMsjResultado);

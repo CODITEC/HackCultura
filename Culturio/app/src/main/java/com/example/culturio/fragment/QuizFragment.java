@@ -33,7 +33,9 @@ public class QuizFragment extends Fragment {
         respuestaA = view.findViewById(R.id.respuestaA);
         respuestaB = view.findViewById(R.id.respuestaB);
         respuestaC = view.findViewById(R.id.respuestaC);
-
+        if(Common.returnHome == 1){
+            return view;
+        }
         if(Common.positionQuiz > 3){
             return view;
         }

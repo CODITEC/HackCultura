@@ -27,6 +27,10 @@ public class Common {
         datosPersona.put(1,"Franco Cóndor");
         datosPersona.put(2,"franco.condor");
         datosPersona.put(3,"photo_male_1");
+        datosPersona.put(4,"#2");
+        datosPersona.put(5,"Barranco, LI");
+        datosPersona.put(6,"350");
+        datosPersona.put(7,"180");
     }
 
 }
