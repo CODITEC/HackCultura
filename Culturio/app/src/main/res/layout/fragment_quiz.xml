@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.QuizFragment">
+    tools:context=".fragment.QuizFragment"
+    android:background="@color/grey_10">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/txtQuestion"
             android:textSize="22sp"
             android:gravity="center"
             android:layout_marginTop="30dp"
@@ -18,9 +20,10 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿PREGUNTA DEL MILLÓN?"/>
+            android:text="¿Cual es la figura representativa en la sala central del museo?"/>
 
         <LinearLayout
+            android:layout_marginBottom="24dp"
             android:orientation="horizontal"
             android:background="@drawable/bg_item"
             android:layout_marginRight="32dp"
@@ -30,9 +33,85 @@
             android:layout_height="wrap_content"
             >
             <ImageView
-                android:src="@drawable/letter_a"
+                android:id="@+id/respuestaA"
+                android:src="@drawable/ic_letter_a_svg"
                 android:layout_width="60dp"
                 android:layout_height="60dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="TUMI"
+                    android:textSize="18sp"
+                    android:textColor="#4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/respuestaB"
+                android:src="@drawable/ic_letter_b_svg"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="PUERTA DEL SOL"
+                    android:textSize="18sp"
+                    android:textColor="#4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/respuestaC"
+                android:src="@drawable/ic_letter_c_svg"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="SOL DE ECHENIQUE"
+                    android:textSize="18sp"
+                    android:textColor="#4a4a4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
 
         </LinearLayout>

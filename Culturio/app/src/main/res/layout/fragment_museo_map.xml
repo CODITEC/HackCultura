@@ -333,7 +333,8 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                 android:layout_marginRight="@dimen/spacing_large"
                 android:background="@color/colorPrimaryDark"
                 android:text="Comenzar mi historia"
-                android:textColor="#ffffff"/>
+                android:textColor="#ffffff"
+                android:id="@+id/btnStart"/>
 
             <View
                 android:layout_width="match_parent"
