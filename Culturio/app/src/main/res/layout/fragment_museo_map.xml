@@ -398,7 +398,7 @@ app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBeh
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
 
-                                    android:text="Imágenes"
+                                    android:text="VR/AR"
                                     android:textAlignment="center"
                                     android:textColor="@color/icons"
                                     android:textSize="13dp"

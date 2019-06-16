@@ -278,7 +278,7 @@ public class CulturioActivity extends AppCompatActivity
                 .position(new LatLng(-12.086101,-77.001915))
                 .title(String.format("Museo"))
                 .flat(true)
-                .icon(BitmapDescriptorFactory.fromResource((R.drawable.museum_big))));
+                .icon(BitmapDescriptorFactory.fromResource((R.drawable.museum_red))));
 
     }
 
